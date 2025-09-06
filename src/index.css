@@ -1,0 +1,169 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Tech Xact Recruitment Services Design System */
+
+@layer base {
+  :root {
+    /* Primary Brand Colors */
+    --primary: 220 100% 15%;           /* Deep Navy */
+    --primary-foreground: 0 0% 98%;
+    --primary-light: 220 100% 25%;
+    --primary-dark: 220 100% 8%;
+    
+    /* Accent Colors */
+    --accent-cyan: 185 100% 50%;       /* Tech Cyan */
+    --accent-emerald: 155 100% 45%;    /* Success Green */
+    --accent-purple: 250 85% 65%;      /* Innovation Purple */
+    
+    /* Neutral Colors */
+    --background: 0 0% 100%;
+    --foreground: 220 15% 15%;
+    --muted: 220 15% 96%;
+    --muted-foreground: 220 10% 45%;
+    --border: 220 15% 90%;
+    
+    /* Semantic Colors */
+    --success: 155 100% 45%;
+    --warning: 45 100% 55%;
+    --destructive: 0 85% 60%;
+    
+    /* Card and Surface */
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 15%;
+    
+    /* Interactive Elements */
+    --secondary: 220 15% 96%;
+    --secondary-foreground: 220 15% 15%;
+    --input: 220 15% 90%;
+    --ring: 220 100% 50%;
+    
+    --radius: 0.75rem;
+    
+    /* Accent Color Variables for Tailwind */
+    --accent: 220 15% 96%;
+    --accent-foreground: 220 15% 15%;
+    
+    /* Gradient Definitions */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-light)) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent-cyan)) 0%, hsl(var(--accent-emerald)) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary-dark)) 0%, hsl(var(--primary)) 50%, hsl(var(--primary-light)) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)) 0%, hsl(var(--muted)) 100%);
+  }
+
+  .dark {
+    --background: 220 15% 5%;
+    --foreground: 0 0% 95%;
+    --card: 220 15% 8%;
+    --card-foreground: 0 0% 95%;
+    --popover: 220 15% 8%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 220 100% 50%;
+    --primary-foreground: 220 15% 5%;
+    --secondary: 220 15% 12%;
+    --secondary-foreground: 0 0% 95%;
+    --muted: 220 15% 12%;
+    --muted-foreground: 220 10% 65%;
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 220 100% 50%;
+    --accent: 220 15% 12%;
+    --accent-foreground: 0 0% 95%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Custom Component Styles */
+@layer components {
+  /* Hero Button Variants */
+  .btn-hero-primary {
+    @apply bg-gradient-to-r from-cyan-500 to-emerald-500 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105;
+  }
+  
+  .btn-hero-secondary {
+    @apply bg-white/10 backdrop-blur-sm text-white border border-white/20 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white/20 transition-all duration-300;
+  }
+  
+  /* Service Cards */
+  .service-card {
+    @apply bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100;
+  }
+  
+  /* Section Containers */
+  .section-container {
+    @apply max-w-7xl mx-auto px-6 lg:px-8;
+  }
+  
+  /* Gradient Backgrounds */
+  .bg-gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .bg-gradient-accent {
+    background: var(--gradient-accent);
+  }
+  
+  /* Text Gradients */
+  .text-gradient-primary {
+    @apply bg-gradient-to-r from-cyan-500 to-emerald-500 bg-clip-text text-transparent;
+  }
+  
+  /* Animation Classes */
+  .fade-in {
+    @apply animate-[fadeIn_0.6s_ease-out];
+  }
+  
+  .slide-up {
+    @apply animate-[slideUp_0.8s_ease-out];
+  }
+}
+
+/* Custom Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Utility Classes */
+.text-balance {
+  text-wrap: balance;
+}
