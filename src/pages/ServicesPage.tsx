@@ -263,67 +263,6 @@ const ServicesPage = () => {
           </div>
         </section>
 
-        {/* The Tech Xact Advantage */}
-        <section className="py-20 bg-white">
-          <div className="section-container">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
-              <div>
-                <p className="text-sm font-medium text-accent-emerald mb-2">The Tech Xact Advantage</p>
-                <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
-                  What Makes Us Your Ideal Partner
-                </h2>
-                <div className="space-y-6">
-                  {advantages.map((advantage, index) => (
-                    <div key={index} className="flex items-start space-x-4">
-                      <div className="w-12 h-12 bg-gradient-to-br from-primary/10 to-accent-cyan/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                        <advantage.icon className="h-6 w-6 text-primary" />
-                      </div>
-                      <div>
-                        <h4 className="text-lg font-semibold text-primary mb-2">{advantage.title}:</h4>
-                        <p className="text-muted-foreground">{advantage.description}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <div className="relative">
-                <img 
-                  src={teamCollaborationImage} 
-                  alt="Team collaboration" 
-                  className="rounded-2xl shadow-lg w-full h-auto"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Track Record */}
-        <section className="py-20 bg-gray-50">
-          <div className="section-container">
-            <div className="text-center mb-16">
-              <p className="text-sm font-medium text-accent-cyan mb-2">Impact & Reach</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-                Our Track Record of Success
-              </h2>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {stats.map((stat, index) => (
-                <div 
-                  key={index} 
-                  className="bg-white p-8 rounded-2xl hover:shadow-lg transition-all duration-300 border border-gray-200 text-center"
-                >
-                  <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary/10 to-accent-cyan/10 flex items-center justify-center mx-auto mb-4">
-                    <stat.icon className="h-8 w-8 text-primary" />
-                  </div>
-                  <div className="text-4xl font-bold text-primary mb-2">{stat.number}</div>
-                  <div className="text-lg font-semibold text-gray-800 mb-2">{stat.label}</div>
-                  <div className="text-muted-foreground text-sm">{stat.subtitle}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-br from-primary/5 to-accent-cyan/5">
