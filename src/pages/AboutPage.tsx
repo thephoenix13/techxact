@@ -128,14 +128,7 @@ const AboutPage = () => {
                   We are more than recruiters—our mission is to be strategic hiring partners who help 
                   businesses scale with precision, efficiency, and the right people.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button className="bg-gradient-accent text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300">
-                    Partner With Us
-                  </Button>
-                  <Button variant="outline" className="px-8 py-3 rounded-lg">
-                    Learn More
-                  </Button>
-                </div>
+             
               </div>
               <div className="relative">
                 <img 
@@ -148,20 +141,74 @@ const AboutPage = () => {
           </div>
         </section>
 
+                {/* The Tech Xact Advantage */}
+        <section className="py-20 bg-white">
+          <div className="section-container">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+              <div>
+                <p className="text-sm font-medium text-accent-emerald mb-2">The Tech Xact Advantage</p>
+                <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
+                  What Makes Us Your Ideal Partner
+                </h2>
+                <div className="space-y-6">
+                  {advantages.map((advantage, index) => (
+                    <div key={index} className="flex items-start space-x-4">
+                      <div className="w-12 h-12 bg-gradient-to-br from-primary/10 to-accent-cyan/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <advantage.icon className="h-6 w-6 text-primary" />
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-semibold text-primary mb-2">{advantage.title}:</h4>
+                        <p className="text-muted-foreground">{advantage.description}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="relative">
+                <img 
+                  src={teamCollaborationImage} 
+                  alt="Team collaboration" 
+                  className="rounded-2xl shadow-lg w-full h-auto"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Track Record */}
+        <section className="py-20 bg-gray-50">
+          <div className="section-container">
+            <div className="text-center mb-16">
+              <p className="text-sm font-medium text-accent-cyan mb-2">Impact & Reach</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+                Our Track Record of Success
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {stats.map((stat, index) => (
+                <div 
+                  key={index} 
+                  className="bg-white p-8 rounded-2xl hover:shadow-lg transition-all duration-300 border border-gray-200 text-center"
+                >
+                  <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary/10 to-accent-cyan/10 flex items-center justify-center mx-auto mb-4">
+                    <stat.icon className="h-8 w-8 text-primary" />
+                  </div>
+                  <div className="text-4xl font-bold text-primary mb-2">{stat.number}</div>
+                  <div className="text-lg font-semibold text-gray-800 mb-2">{stat.label}</div>
+                  <div className="text-muted-foreground text-sm">{stat.subtitle}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+
+        
         {/* Mission & Vision */}
         <section className="py-20 bg-white">
           <div className="section-container">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
-                Precision Hiring Across Tech and Non-Tech Roles
-              </h2>
-              <p className="text-xl text-muted-foreground mb-8 max-w-4xl mx-auto leading-relaxed">
-                TechXact is built for companies that demand accuracy in hiring — whether you're scaling your IT infrastructure 
-                or expanding your operations team. Our platform intelligently matches candidates to roles across industries, 
-                ensuring every hire is a strategic win.
-              </p>
-            </div>
-
+            
             <div className="bg-gradient-to-br from-primary/5 to-accent-cyan/5 rounded-2xl p-8 mb-16 border border-primary/10">
               <h3 className="text-2xl font-bold text-primary mb-6 text-center">Our Mission & Values</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -181,8 +228,7 @@ const AboutPage = () => {
                   <p className="text-muted-foreground">We support hiring managers and job seekers alike — from coders to coordinators.</p>
                 </div>
               </div>
-              
-            </div>
+             
           </div>
         </section>
 
@@ -247,10 +293,9 @@ const AboutPage = () => {
           </div>
         </section>
 
-        
+       
 
         
-
         {/* Who We Work With */}
         <section className="py-20 bg-white">
           <div className="section-container">
@@ -293,7 +338,32 @@ const AboutPage = () => {
           </div>
         </section>
 
-        
+        {/* Partner With Us Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="section-container text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">Partner With Us</h2>
+            <p className="text-xl text-muted-foreground mb-8 max-w-4xl mx-auto">
+              If you believe talent is the foundation of growth, let's build that foundation together.
+              At Techxact, we don't just fill vacancies — we build high-performing teams.
+            </p>
+            <p className="text-lg text-muted-foreground mb-8 max-w-3xl mx-auto">
+              Whether you're scaling a tech startup, hiring mid-level talent, or building a leadership bench 
+              in a non-IT vertical, we bring precision, speed, and integrity to every hire.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+              <Button className="bg-gradient-accent text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300">
+                💼 Looking to Hire?
+              </Button>
+              <Button className="bg-secondary hover:bg-secondary/80 text-white px-8 py-3 rounded-lg">
+                🎯 Seeking Opportunities?
+              </Button>
+            </div>
+            <div className="text-muted-foreground">
+              📧 Drop us a message: <a href="mailto:info@techxacts.com" className="text-primary hover:underline">info@techxacts.com</a> | 
+              🌐 Website: <a href="https://techxacts.com/" className="text-primary hover:underline">https://techxacts.com/</a> (in process)
+            </div>
+          </div>
+        </section>
       </main>
 
       <Footer />
