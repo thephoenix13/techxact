@@ -33,31 +33,7 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Search Bar */}
-          <div className="w-full max-w-4xl mx-auto mb-16 slide-up">
-            <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-2xl border border-white/20">
-              <div className="flex flex-col md:flex-row gap-4">
-                <div className="flex-1">
-                  <input 
-                    type="text" 
-                    placeholder="Job title or keyword" 
-                    className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/20 text-gray-700"
-                  />
-                </div>
-                <div className="flex-1">
-                  <input 
-                    type="text" 
-                    placeholder="Location" 
-                    className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/20 text-gray-700"
-                  />
-                </div>
-                <Button className="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-lg flex items-center gap-2">
-                  <Search className="h-4 w-4" />
-                  Search
-                </Button>
-              </div>
-            </div>
-          </div>
+        
 
           {/* Stats */}
           <div className="grid grid-cols-3 gap-8 text-center slide-up max-w-2xl mx-auto">
