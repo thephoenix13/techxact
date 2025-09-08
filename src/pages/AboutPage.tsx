@@ -3,6 +3,7 @@ import { CheckCircle, Award, Clock, Users2, Target, Zap, Building2, Code, Briefc
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import heroImage from "@/assets/hero-image.jpg";
+import teamCollaborationImage from "@/assets/team-collaboration.jpg";
 
 const AboutPage = () => {
   const keyFeatures = [
@@ -86,6 +87,29 @@ const AboutPage = () => {
     "MSMEs & Mid-Sized Companies", 
     "Large Enterprises",
     "Recruitment Process Outsourcing (RPO) Partners"
+  ];
+
+  const advantages = [
+    {
+      icon: Target,
+      title: "Precision Matching",
+      description: "Our AI-driven approach ensures perfect alignment between candidate skills and role requirements."
+    },
+    {
+      icon: Zap,
+      title: "Rapid Deployment",
+      description: "Streamlined processes that get quality candidates in front of you faster than traditional methods."
+    },
+    {
+      icon: Shield,
+      title: "Quality Assurance",
+      description: "Rigorous screening and verification processes ensure every candidate meets our high standards."
+    },
+    {
+      icon: Globe,
+      title: "Wide Reach",
+      description: "Access to talent across India and internationally, from metro cities to emerging markets."
+    }
   ];
 
   const stats = [
@@ -196,7 +220,6 @@ const AboutPage = () => {
                   </div>
                   <div className="text-4xl font-bold text-primary mb-2">{stat.number}</div>
                   <div className="text-lg font-semibold text-gray-800 mb-2">{stat.label}</div>
-                  <div className="text-muted-foreground text-sm">{stat.subtitle}</div>
                 </div>
               ))}
             </div>
