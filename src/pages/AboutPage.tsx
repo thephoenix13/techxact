@@ -3,6 +3,7 @@ import { CheckCircle, Award, Clock, Users2, Target, Zap, Building2, Code, Briefc
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import heroImage from "@/assets/hero-image.jpg";
+import teamCollaborationImage from "@/assets/team-collaboration.jpg";
 
 const AboutPage = () => {
   const keyFeatures = [
@@ -109,6 +110,24 @@ const AboutPage = () => {
     }
   ];
 
+  const advantages = [
+    {
+      icon: Target,
+      title: "Precision Matching",
+      description: "Our AI-powered platform understands the nuances of both technical and business roles, ensuring every candidate is a strategic fit."
+    },
+    {
+      icon: Clock,
+      title: "Fast Turnaround",
+      description: "Post a job today, start interviewing tomorrow with our efficient processes and pre-screened talent pool."
+    },
+    {
+      icon: Shield,
+      title: "Quality Assurance",
+      description: "Every candidate undergoes rigorous screening for skills, experience, and cultural fit across all industries."
+    }
+  ];
+
   return (
     <div className="min-h-screen">
       <Header />
@@ -196,7 +215,6 @@ const AboutPage = () => {
                   </div>
                   <div className="text-4xl font-bold text-primary mb-2">{stat.number}</div>
                   <div className="text-lg font-semibold text-gray-800 mb-2">{stat.label}</div>
-                  <div className="text-muted-foreground text-sm">{stat.subtitle}</div>
                 </div>
               ))}
             </div>
