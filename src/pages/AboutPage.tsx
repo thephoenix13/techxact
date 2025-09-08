@@ -252,31 +252,53 @@ const AboutPage = () => {
           </div>
         </section>
 
-        {/* What Sets Us Apart */}
-        <section className="py-20 bg-white">
+     
+       
+
+        {/* Key Features & Why Choose Us */}
+        <section className="py-20 bg-gray-50">
           <div className="section-container">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">What Sets Us Apart</h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Our deep industry knowledge, tech-enabled processes, and commitment to quality make us a trusted hiring partner.
-              </p>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20">
+              <div className="bg-white rounded-2xl p-8 shadow-lg">
+                <h3 className="text-2xl font-bold text-primary mb-6">Key Features</h3>
+                <div className="space-y-4">
+                  {keyFeatures.map((feature, index) => (
+                    <div key={index} className="flex items-start space-x-3">
+                      <CheckCircle className="h-5 w-5 text-accent-emerald flex-shrink-0 mt-0.5" />
+                      <span className="text-gray-700">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="bg-white rounded-2xl p-8 shadow-lg">
+                <h3 className="text-2xl font-bold text-primary mb-6">Why Choose Us</h3>
+                <div className="space-y-4">
+                  {whyChooseUs.map((reason, index) => (
+                    <div key={index} className="flex items-start space-x-3">
+                      <CheckCircle className="h-5 w-5 text-accent-emerald flex-shrink-0 mt-0.5" />
+                      <span className="text-gray-700">{reason}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-              {whatSetsUsApart.map((item, index) => (
-                <div key={index} className="bg-gray-50 rounded-2xl p-6 hover:shadow-lg transition-all duration-300">
-                  <div className="w-16 h-16 bg-gradient-to-br from-primary/10 to-accent-cyan/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <item.icon className="h-8 w-8 text-primary" />
+            {/* Why Companies Choose Techxact */}
+            <div className="bg-gradient-to-br from-primary/5 to-accent-cyan/5 rounded-2xl p-8 mb-16 border border-primary/10">
+              <h3 className="text-2xl font-bold text-primary mb-6 text-center">Why Companies Choose Techxact</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {companyChoiceReasons.map((reason, index) => (
+                  <div key={index} className="flex items-start space-x-3">
+                    <CheckCircle className="h-5 w-5 text-accent-emerald flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-700">{reason}</span>
                   </div>
-                  <h4 className="text-lg font-semibold text-primary mb-3 text-center">{item.title}</h4>
-                  <p className="text-muted-foreground text-center">{item.description}</p>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </section>
 
-      
         {/* Who We Work With */}
         <section className="py-20 bg-white">
           <div className="section-container">
@@ -319,32 +341,8 @@ const AboutPage = () => {
           </div>
         </section>
 
-        {/* Partner With Us Section */}
-        <section className="py-20 bg-gray-50">
-          <div className="section-container text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">Partner With Us</h2>
-            <p className="text-xl text-muted-foreground mb-8 max-w-4xl mx-auto">
-              If you believe talent is the foundation of growth, let's build that foundation together.
-              At Techxact, we don't just fill vacancies — we build high-performing teams.
-            </p>
-            <p className="text-lg text-muted-foreground mb-8 max-w-3xl mx-auto">
-              Whether you're scaling a tech startup, hiring mid-level talent, or building a leadership bench 
-              in a non-IT vertical, we bring precision, speed, and integrity to every hire.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Button className="bg-gradient-accent text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300">
-                💼 Looking to Hire?
-              </Button>
-              <Button className="bg-secondary hover:bg-secondary/80 text-white px-8 py-3 rounded-lg">
-                🎯 Seeking Opportunities?
-              </Button>
-            </div>
-            <div className="text-muted-foreground">
-              📧 Drop us a message: <a href="mailto:info@techxacts.com" className="text-primary hover:underline">info@techxacts.com</a> | 
-              🌐 Website: <a href="https://techxacts.com/" className="text-primary hover:underline">https://techxacts.com/</a> (in process)
-            </div>
-          </div>
-        </section>
+        
+       
       </main>
 
       <Footer />
