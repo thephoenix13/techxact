@@ -3,7 +3,6 @@ import { CheckCircle, Award, Clock, Users2, Target, Zap, Building2, Code, Briefc
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import heroImage from "@/assets/hero-image.jpg";
-import teamCollaborationImage from "@/assets/team-collaboration.jpg";
 
 const AboutPage = () => {
   const keyFeatures = [
@@ -89,29 +88,6 @@ const AboutPage = () => {
     "Recruitment Process Outsourcing (RPO) Partners"
   ];
 
-  const advantages = [
-    {
-      icon: Target,
-      title: "Precision Matching",
-      description: "Our AI-driven approach ensures perfect alignment between candidate skills and role requirements."
-    },
-    {
-      icon: Zap,
-      title: "Rapid Deployment",
-      description: "Streamlined processes that get quality candidates in front of you faster than traditional methods."
-    },
-    {
-      icon: Shield,
-      title: "Quality Assurance",
-      description: "Rigorous screening and verification processes ensure every candidate meets our high standards."
-    },
-    {
-      icon: Globe,
-      title: "Wide Reach",
-      description: "Access to talent across India and internationally, from metro cities to emerging markets."
-    }
-  ];
-
   const stats = [
     {
       icon: Award,
@@ -152,7 +128,14 @@ const AboutPage = () => {
                   We are more than recruiters—our mission is to be strategic hiring partners who help 
                   businesses scale with precision, efficiency, and the right people.
                 </p>
-             
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button className="bg-gradient-accent text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300">
+                    Partner With Us
+                  </Button>
+                  <Button variant="outline" className="px-8 py-3 rounded-lg">
+                    Learn More
+                  </Button>
+                </div>
               </div>
               <div className="relative">
                 <img 
@@ -165,83 +148,9 @@ const AboutPage = () => {
           </div>
         </section>
 
-                {/* The Tech Xact Advantage */}
-        <section className="py-20 bg-white">
-          <div className="section-container">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
-              <div>
-                <p className="text-sm font-medium text-accent-emerald mb-2">The Tech Xact Advantage</p>
-                <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
-                  What Makes Us Your Ideal Partner
-                </h2>
-                <div className="space-y-6">
-                  {advantages.map((advantage, index) => (
-                    <div key={index} className="flex items-start space-x-4">
-                      <div className="w-12 h-12 bg-gradient-to-br from-primary/10 to-accent-cyan/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                        <advantage.icon className="h-6 w-6 text-primary" />
-                      </div>
-                      <div>
-                        <h4 className="text-lg font-semibold text-primary mb-2">{advantage.title}:</h4>
-                        <p className="text-muted-foreground">{advantage.description}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <div className="relative">
-                <img 
-                  src={teamCollaborationImage} 
-                  alt="Team collaboration" 
-                  className="rounded-2xl shadow-lg w-full h-auto"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Track Record */}
-        <section className="py-20 bg-gray-50">
-          <div className="section-container">
-            <div className="text-center mb-16">
-              <p className="text-sm font-medium text-accent-cyan mb-2">Impact & Reach</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-                Our Track Record of Success
-              </h2>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {stats.map((stat, index) => (
-                <div 
-                  key={index} 
-                  className="bg-white p-8 rounded-2xl hover:shadow-lg transition-all duration-300 border border-gray-200 text-center"
-                >
-                  <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary/10 to-accent-cyan/10 flex items-center justify-center mx-auto mb-4">
-                    <stat.icon className="h-8 w-8 text-primary" />
-                  </div>
-                  <div className="text-4xl font-bold text-primary mb-2">{stat.number}</div>
-                  <div className="text-lg font-semibold text-gray-800 mb-2">{stat.label}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-
-        
         {/* Mission & Vision */}
         <section className="py-20 bg-white">
           <div className="section-container">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
-                Precision Hiring Across Tech and Non-Tech Roles
-              </h2>
-              <p className="text-xl text-muted-foreground mb-8 max-w-4xl mx-auto leading-relaxed">
-                TechXact is built for companies that demand accuracy in hiring — whether you're scaling your IT infrastructure 
-                or expanding your operations team. Our platform intelligently matches candidates to roles across industries, 
-                ensuring every hire is a strategic win.
-              </p>
-            </div>
-
             <div className="bg-gradient-to-br from-primary/5 to-accent-cyan/5 rounded-2xl p-8 mb-16 border border-primary/10">
               <h3 className="text-2xl font-bold text-primary mb-6 text-center">Our Mission & Values</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -332,30 +241,7 @@ const AboutPage = () => {
           </div>
         </section>
 
-        {/* What Sets Us Apart */}
-        <section className="py-20 bg-white">
-          <div className="section-container">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">What Sets Us Apart</h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Our deep industry knowledge, tech-enabled processes, and commitment to quality make us a trusted hiring partner.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-              {whatSetsUsApart.map((item, index) => (
-                <div key={index} className="bg-gray-50 rounded-2xl p-6 hover:shadow-lg transition-all duration-300">
-                  <div className="w-16 h-16 bg-gradient-to-br from-primary/10 to-accent-cyan/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <item.icon className="h-8 w-8 text-primary" />
-                  </div>
-                  <h4 className="text-lg font-semibold text-primary mb-3 text-center">{item.title}</h4>
-                  <p className="text-muted-foreground text-center">{item.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
+      
         {/* Key Features & Why Choose Us */}
         <section className="py-20 bg-gray-50">
           <div className="section-container">
