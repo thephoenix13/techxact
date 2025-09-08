@@ -295,7 +295,50 @@ const AboutPage = () => {
 
        
 
-        
+        {/* Key Features & Why Choose Us */}
+        <section className="py-20 bg-gray-50">
+          <div className="section-container">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20">
+              <div className="bg-white rounded-2xl p-8 shadow-lg">
+                <h3 className="text-2xl font-bold text-primary mb-6">Key Features</h3>
+                <div className="space-y-4">
+                  {keyFeatures.map((feature, index) => (
+                    <div key={index} className="flex items-start space-x-3">
+                      <CheckCircle className="h-5 w-5 text-accent-emerald flex-shrink-0 mt-0.5" />
+                      <span className="text-gray-700">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="bg-white rounded-2xl p-8 shadow-lg">
+                <h3 className="text-2xl font-bold text-primary mb-6">Why Choose Us</h3>
+                <div className="space-y-4">
+                  {whyChooseUs.map((reason, index) => (
+                    <div key={index} className="flex items-start space-x-3">
+                      <CheckCircle className="h-5 w-5 text-accent-emerald flex-shrink-0 mt-0.5" />
+                      <span className="text-gray-700">{reason}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Why Companies Choose Techxact */}
+            <div className="bg-gradient-to-br from-primary/5 to-accent-cyan/5 rounded-2xl p-8 mb-16 border border-primary/10">
+              <h3 className="text-2xl font-bold text-primary mb-6 text-center">Why Companies Choose Techxact</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {companyChoiceReasons.map((reason, index) => (
+                  <div key={index} className="flex items-start space-x-3">
+                    <CheckCircle className="h-5 w-5 text-accent-emerald flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-700">{reason}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Who We Work With */}
         <section className="py-20 bg-white">
           <div className="section-container">
