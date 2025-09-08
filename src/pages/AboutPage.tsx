@@ -208,7 +208,17 @@ const AboutPage = () => {
         {/* Mission & Vision */}
         <section className="py-20 bg-white">
           <div className="section-container">
-            
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
+                Precision Hiring Across Tech and Non-Tech Roles
+              </h2>
+              <p className="text-xl text-muted-foreground mb-8 max-w-4xl mx-auto leading-relaxed">
+                TechXact is built for companies that demand accuracy in hiring — whether you're scaling your IT infrastructure 
+                or expanding your operations team. Our platform intelligently matches candidates to roles across industries, 
+                ensuring every hire is a strategic win.
+              </p>
+            </div>
+
             <div className="bg-gradient-to-br from-primary/5 to-accent-cyan/5 rounded-2xl p-8 mb-16 border border-primary/10">
               <h3 className="text-2xl font-bold text-primary mb-6 text-center">Our Mission & Values</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -228,7 +238,12 @@ const AboutPage = () => {
                   <p className="text-muted-foreground">We support hiring managers and job seekers alike — from coders to coordinators.</p>
                 </div>
               </div>
-              
+              <div className="text-center mt-8">
+                <h4 className="text-xl font-semibold text-primary mb-4">Our Mission</h4>
+                <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                  To empower organizations and professionals through smart, inclusive, and efficient hiring — across every domain.
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -294,9 +309,73 @@ const AboutPage = () => {
           </div>
         </section>
 
-       
+        {/* What Sets Us Apart */}
+        <section className="py-20 bg-white">
+          <div className="section-container">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">What Sets Us Apart</h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                Our deep industry knowledge, tech-enabled processes, and commitment to quality make us a trusted hiring partner.
+              </p>
+            </div>
 
-       
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+              {whatSetsUsApart.map((item, index) => (
+                <div key={index} className="bg-gray-50 rounded-2xl p-6 hover:shadow-lg transition-all duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-br from-primary/10 to-accent-cyan/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <item.icon className="h-8 w-8 text-primary" />
+                  </div>
+                  <h4 className="text-lg font-semibold text-primary mb-3 text-center">{item.title}</h4>
+                  <p className="text-muted-foreground text-center">{item.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Key Features & Why Choose Us */}
+        <section className="py-20 bg-gray-50">
+          <div className="section-container">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20">
+              <div className="bg-white rounded-2xl p-8 shadow-lg">
+                <h3 className="text-2xl font-bold text-primary mb-6">Key Features</h3>
+                <div className="space-y-4">
+                  {keyFeatures.map((feature, index) => (
+                    <div key={index} className="flex items-start space-x-3">
+                      <CheckCircle className="h-5 w-5 text-accent-emerald flex-shrink-0 mt-0.5" />
+                      <span className="text-gray-700">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="bg-white rounded-2xl p-8 shadow-lg">
+                <h3 className="text-2xl font-bold text-primary mb-6">Why Choose Us</h3>
+                <div className="space-y-4">
+                  {whyChooseUs.map((reason, index) => (
+                    <div key={index} className="flex items-start space-x-3">
+                      <CheckCircle className="h-5 w-5 text-accent-emerald flex-shrink-0 mt-0.5" />
+                      <span className="text-gray-700">{reason}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Why Companies Choose Techxact */}
+            <div className="bg-gradient-to-br from-primary/5 to-accent-cyan/5 rounded-2xl p-8 mb-16 border border-primary/10">
+              <h3 className="text-2xl font-bold text-primary mb-6 text-center">Why Companies Choose Techxact</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {companyChoiceReasons.map((reason, index) => (
+                  <div key={index} className="flex items-start space-x-3">
+                    <CheckCircle className="h-5 w-5 text-accent-emerald flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-700">{reason}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Who We Work With */}
         <section className="py-20 bg-white">
