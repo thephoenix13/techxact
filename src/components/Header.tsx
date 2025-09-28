@@ -44,9 +44,14 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
+            <Link 
+              to="/contact" 
+              className={`transition-colors ${location.pathname === '/contact' }`}
+            >
             <Button className="bg-gradient-accent text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-300">
               Get Started
             </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
