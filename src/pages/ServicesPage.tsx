@@ -277,9 +277,6 @@ const ServicesPage = () => {
               <Button className="bg-gradient-accent text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300">
                 Get Started Today
               </Button>
-              <Button variant="outline" className="px-8 py-3 rounded-lg">
-                Schedule Consultation
-              </Button>
             </div>
           </div>
         </section>

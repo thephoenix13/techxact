@@ -292,14 +292,6 @@ const About = () => {
             If you believe talent is the foundation of growth, let's build that foundation together.
             At Techxact, we don't just fill vacancies — we build high-performing teams.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Button className="bg-gradient-accent text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300">
-              💼 Looking to Hire?
-            </Button>
-            <Button className="bg-secondary hover:bg-secondary/80 text-white px-8 py-3 rounded-lg">
-              🎯 Seeking Opportunities?
-            </Button>
-          </div>
           <div className="text-muted-foreground">
             📧 Drop us a message: <a href="mailto:info@techxacts.com" className="text-primary hover:underline">info@techxacts.com</a> | 
             🌐 Website: <a href="https://techxacts.com/" className="text-primary hover:underline">https://techxacts.com/</a> (in process)

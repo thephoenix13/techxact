@@ -316,14 +316,6 @@ const ContactPage = () => {
               Whether you're a company looking to build your dream team or a professional seeking your next opportunity, 
               we're here to make the perfect connection.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Button className="bg-gradient-accent text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300">
-                💼 I'm Looking to Hire
-              </Button>
-              <Button className="bg-secondary hover:bg-secondary/80 text-white px-8 py-3 rounded-lg">
-                🎯 I'm Seeking Opportunities
-              </Button>
-            </div>
             <div className="text-muted-foreground">
               📧 Email: <a href="mailto:info@techxacts.com" className="text-primary hover:underline font-semibold">info@techxacts.com</a> | 
               🌐 Website: <a href="https://techxacts.com/" className="text-primary hover:underline font-semibold">https://techxacts.com/</a> (coming soon)

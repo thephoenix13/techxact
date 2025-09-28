@@ -1,8 +1,15 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Users, Globe, Target, Search } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+  const navigate = useNavigate();
+
+  const handleGetStarted = () => {
+    navigate('/contact');
+  };
+
   return (
     <section className="min-h-screen bg-gradient-hero relative overflow-hidden pt-16">
       {/* Background Elements */}
@@ -23,7 +30,7 @@ const Hero = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mb-16 justify-center slide-up">
-              <Button className="btn-hero-primary group text-lg px-8 py-4">
+              <Button onClick={handleGetStarted} className="btn-hero-primary group text-lg px-8 py-4">
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
