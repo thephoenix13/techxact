@@ -186,7 +186,25 @@ const ContactPage = () => {
                   </p>
                 </div>
 
-            
+                               <div className="grid grid-cols-1 gap-4 mb-8">
+                  {contactInfo.map((item, index) => (
+                    <div 
+                      key={index}
+                      className="bg-gray-50 p-6 rounded-xl hover:shadow-md transition-all duration-300"
+                    >
+                      <div className="flex items-start space-x-4">
+                        <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center shadow-sm flex-shrink-0">
+                          <item.icon className={`h-6 w-6 ${item.color}`} />
+                        </div>
+                        <div>
+                          <div className="text-gray-600 text-sm font-medium">{item.label}</div>
+                          <div className="text-primary font-semibold text-lg">{item.value}</div>
+                          <div className="text-gray-500 text-sm">{item.description}</div>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
 
                 {/* Quick Services Overview */}
                
