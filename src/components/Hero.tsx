@@ -27,9 +27,6 @@ const Hero = () => {
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button className="btn-hero-secondary text-lg px-8 py-4">
-                Browse Jobs
-              </Button>
             </div>
           </div>
 
