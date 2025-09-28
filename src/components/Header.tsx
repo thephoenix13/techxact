@@ -46,12 +46,9 @@ const Header = () => {
           <div className="hidden md:block">
 
             <Button className="bg-gradient-accent text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-300">
-                          <Link 
-              to="/contact" 
-              className={`transition-colors ${location.pathname === '/contact' }`}
-            >
+                        
               Get Started
-                            </Link>
+                            
             </Button>
             
           </div>
