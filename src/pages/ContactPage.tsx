@@ -207,20 +207,7 @@ const ContactPage = () => {
                 </div>
 
                 {/* Quick Services Overview */}
-                <div className="bg-gradient-to-br from-primary/5 to-accent-cyan/5 p-8 rounded-xl border border-primary/10 mb-8">
-                  <h3 className="text-primary font-semibold mb-4 text-lg">Our Services at a Glance</h3>
-                  <div className="space-y-4">
-                    {services.map((service, index) => (
-                      <div key={index} className="flex items-start space-x-3">
-                        <service.icon className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                        <div>
-                          <div className="font-medium text-gray-800">{service.title}</div>
-                          <div className="text-sm text-gray-600">{service.description}</div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+               
               </div>
             </div>
           </div>
