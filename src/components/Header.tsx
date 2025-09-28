@@ -2,11 +2,16 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleGetStarted = () => {
+    navigate('/contact');
+  };
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
@@ -45,10 +50,11 @@ const Header = () => {
           {/* CTA Button */}
           <div className="hidden md:block">
 
-            <Button className="bg-gradient-accent text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-300">
-                        
+            <Button 
+              className="bg-gradient-accent text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-300"
+              onClick={handleGetStarted}
+            >
               Get Started
-                            
             </Button>
             
           </div>
@@ -87,7 +93,10 @@ const Header = () => {
               >
                 Contact
               </Link>
-              <Button className="bg-gradient-accent text-white px-6 py-2 rounded-lg w-fit">
+              <Button 
+                className="bg-gradient-accent text-white px-6 py-2 rounded-lg w-fit"
+                onClick={handleGetStarted}
+              >
                 Get Started
               </Button>
             </div>

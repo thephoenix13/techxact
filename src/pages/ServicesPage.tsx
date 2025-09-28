@@ -6,8 +6,14 @@ import Footer from "@/components/Footer";
 import itTeamImage from "@/assets/it-team.jpg";
 import officeWorkspaceImage from "@/assets/office-workspace.jpg";
 import teamCollaborationImage from "@/assets/team-collaboration.jpg";
+import { useNavigate } from "react-router-dom";
 
 const ServicesPage = () => {
+  const navigate = useNavigate();
+
+  const handleGetStarted = () => {
+    navigate('/contact');
+  };
   const services = [
     {
       icon: Search,
@@ -274,7 +280,10 @@ const ServicesPage = () => {
               Let's discuss how our tailored recruitment solutions can help you build the perfect team.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="bg-gradient-accent text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300">
+              <Button 
+                className="bg-gradient-accent text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300"
+                onClick={handleGetStarted}
+              >
                 Get Started Today
               </Button>
             </div>
