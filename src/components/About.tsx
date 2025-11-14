@@ -13,13 +13,6 @@ import {
   Shield,
   TrendingUp,
 } from "lucide-react";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 
 const About = () => {
   const keyFeatures = [
@@ -332,45 +325,6 @@ const About = () => {
         </div>
       </div>
     </section>
-
-    {/* Our Clients */}
-        <section className="py-20 bg-gray-50">
-          <div className="section-container">
-            <div className="text-center mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">Our Clients</h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
-                Trusted by leading organizations across industries to deliver exceptional talent solutions
-              </p>
-            </div>
-            
-            <div className="relative px-12">
-              <Carousel
-                opts={{
-                  align: "start",
-                  loop: true,
-                }}
-                className="w-full"
-              >
-                <CarouselContent>
-                  {clients.map((client, index) => (
-                    <CarouselItem key={index} className="basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4">
-                      <div className="p-2">
-                        <div className="bg-white rounded-xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-200 min-h-[120px] flex items-center justify-center">
-                          <p className="text-gray-700 font-semibold text-center text-lg">
-                            {client}
-                          </p>
-                        </div>
-                      </div>
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-                <CarouselPrevious />
-                <CarouselNext />
-              </Carousel>
-            </div>
-          </div>
-        </section>
-  
   );
 };
 
