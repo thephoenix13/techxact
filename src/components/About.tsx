@@ -13,6 +13,13 @@ import {
   Shield,
   TrendingUp,
 } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const About = () => {
   const keyFeatures = [
