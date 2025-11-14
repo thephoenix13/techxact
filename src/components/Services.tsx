@@ -42,36 +42,36 @@ const Services = () => {
     }
   ];
 
-  const featuredJobs = [
-    {
-      title: "Senior Software Engineer",
-      company: "TechCorp",
-      location: "New York, NY",
-      type: "Full-time",
-      featured: true
-    },
-    {
-      title: "Product Manager",
-      company: "InnovateLab",
-      location: "San Francisco, CA",
-      type: "Full-time",
-      featured: false
-    },
-    {
-      title: "Data Scientist",
-      company: "DataFlow Inc",
-      location: "Remote",
-      type: "Contract",
-      featured: false
-    }
-  ];
+  // const featuredJobs = [
+  //   {
+  //     title: "Senior Software Engineer",
+  //     company: "TechCorp",
+  //     location: "New York, NY",
+  //     type: "Full-time",
+  //     featured: true
+  //   },
+  //   {
+  //     title: "Product Manager",
+  //     company: "InnovateLab",
+  //     location: "San Francisco, CA",
+  //     type: "Full-time",
+  //     featured: false
+  //   },
+  //   {
+  //     title: "Data Scientist",
+  //     company: "DataFlow Inc",
+  //     location: "Remote",
+  //     type: "Contract",
+  //     featured: false
+  //   }
+  // ];
 
   return (
     <section id="services" className="py-20 bg-white">
       <div className="section-container">
         {/* Featured Jobs Section */}
         <div className="mb-20">
-          <div className="text-center mb-12">
+          {/* <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
               Featured Jobs
             </h2>
@@ -86,9 +86,9 @@ const Services = () => {
                 Remote
               </button>
             </div>
-          </div>
+          </div> */}
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             {featuredJobs.map((job, index) => (
               <Card key={index} className="p-6 hover:shadow-lg transition-all duration-300 border border-gray-200">
                 <div className="flex justify-between items-start mb-3">
@@ -110,7 +110,7 @@ const Services = () => {
               </Card>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* Services Section */}
         <div className="text-center mb-16">
