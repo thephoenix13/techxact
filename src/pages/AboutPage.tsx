@@ -3,6 +3,13 @@ import { CheckCircle, Award, Clock, Users2, Target, Zap, Building2, Code, Briefc
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import heroImage from "@/assets/hero-image.jpg";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const AboutPage = () => {
   const keyFeatures = [
@@ -107,6 +114,23 @@ const AboutPage = () => {
       label: "Average Days to Hire",
       color: "text-accent-purple"
     }
+  ];
+
+  const clients = [
+    "Aditya Birla",
+    "Cognizant",
+    "Deloitte",
+    "Rebuzz Interactive Solutions",
+    "Teamlease",
+    "Sonata Software",
+    "Steepgraph Systems",
+    "Litmus7",
+    "TekIP",
+    "Amreesh Neon Pvt Ltd",
+    "Scoville Retail",
+    "Shree Sulphuric",
+    "Nitrex",
+    "Asha Penn Colour"
   ];
 
   return (
@@ -355,6 +379,39 @@ const AboutPage = () => {
           </div>
         </section>
 
+        {/* Our Clients */}
+        <section className="py-20 bg-gray-50">
+          <div className="section-container">
+            <div className="text-center mb-12">
+              <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">Our Clients</h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                Trusted by leading organizations across industries to deliver exceptional talent solutions
+              </p>
+            </div>
+            
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              className="w-full max-w-6xl mx-auto"
+            >
+              <CarouselContent className="-ml-2 md:-ml-4">
+                {clients.map((client, index) => (
+                  <CarouselItem key={index} className="pl-2 md:pl-4 basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4">
+                    <div className="bg-white rounded-xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-200 h-full flex items-center justify-center">
+                      <p className="text-gray-700 font-semibold text-center text-lg">
+                        {client}
+                      </p>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="hidden md:flex -left-12" />
+              <CarouselNext className="hidden md:flex -right-12" />
+            </Carousel>
+          </div>
+        </section>
        
       </main>
 
